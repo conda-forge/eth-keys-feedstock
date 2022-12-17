@@ -22,17 +22,13 @@ requirements:
     - setuptools-markdown
   run:
     - eth-typing >=2.2.1,<3.0.0
-    - eth-utils >=1.3.0,<2.0.0
+    - eth-utils >=1.8.2,<2.0.0
     - python
 
 test:
   imports:
     - eth_keys
     - eth_keys.backends
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/ethereum/eth-keys
