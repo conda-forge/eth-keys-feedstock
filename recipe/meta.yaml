@@ -11,19 +11,19 @@ source:
   sha256: 7d18887483bc9b8a3fdd8e32ddcb30044b9f08fcb24a380d93b6eee3a5bb3216
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - setuptools-markdown
   run:
     - eth-typing >=3.0.0,<4.0.0
     - eth-utils >=2.0.0,<3.0.0
-    - python >=3.6
+    - python >=3.7
 
 test:
   imports:
