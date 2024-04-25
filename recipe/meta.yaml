@@ -1,5 +1,5 @@
 {% set name = "eth-keys" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a0abccb83f3d84322591a2c047a1e3aa52ea86b185fa3e82ce311d120ca2791e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 2b587e4bbb9ac2195215a7ab0c0fb16042b17d4ec50240ed670bbb8f53da7a48
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
   run:
     - eth-utils >=2.0.0
     - eth-typing >=3.0.0
-    - python >=3.7
+    - python >=3.8
 
 test:
   imports:
