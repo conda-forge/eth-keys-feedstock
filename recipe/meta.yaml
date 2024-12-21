@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: ba33230f851d02c894e83989185b21d76152c49b37e35b61b1d8a6d9f1d20430
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,12 +19,12 @@ requirements:
   host:
     - pip
     - setuptools
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools-markdown
   run:
     - eth-utils >=2.0.0
     - eth-typing >=3.0.0
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ethereum/eth-keys
