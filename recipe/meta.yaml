@@ -1,5 +1,5 @@
 {% set name = "eth-keys" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 79d24fd876201df67741de3e3fefb3f4dbcbb6ace66e47e6fe662851a4547814
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 11549b251876fccd7caedd6905e494ea2309aec352ec2579b00ef9978017a964
 
 build:
   number: 0
