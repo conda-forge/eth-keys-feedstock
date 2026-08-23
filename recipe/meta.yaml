@@ -22,8 +22,8 @@ requirements:
     - python {{ python_min }}
     - setuptools-markdown
   run:
-    - eth-utils >=2.0.0
     - eth-typing >=3.0.0
+    - eth-utils >=2.0.0
     - python >={{ python_min }}
 
 test:
